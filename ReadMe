@@ -1,0 +1,45 @@
+# File Encryption and Decryption (FED)
+
+## Overview
+FED (File Encryption and Decryption) is a Python script that provides a command-line interface for encrypting and decrypting files using symmetric
+key encryption with the Fernet encryption scheme from the `cryptography` library.
+
+## Prerequisite
+-- Python 3.X
+-- Pip
+
+## Features
+- **Encryption**: Encrypts a file using a user-provided password and saves the encrypted data to a new file with a `.encrypted` extension.
+- **Decryption**: Decrypts a previously encrypted file using the correct password and saves the decrypted data to a new file without the `.encrypted` extension.
+- **Secure Key Derivation**: Derives a secure encryption key from the user-provided password using PBKDF2-HMAC with SHA-256 hashing.
+
+## Usage
+1. Clone or download this repository to your local machine.
+2. Install the required dependencies using `pip install -r requirements.txt`.
+3. Run the script `FED.py` in your terminal.
+4. Follow the prompts:
+   - Enter the full path of the file you want to work with (or 'exit' to quit).
+   - Enter your password for encryption/decryption.
+   - Choose whether to encrypt (E) or decrypt (D) the file.
+
+## Supported File Types for Encryption
+The encryption and decryption process implemented in this code can handle a variety of file types. Here are some examples:
+
+- Text files (`.txt`)
+- Image files (`.png`, `.jpg`, `.gif`, etc.)
+- Document files (`.docx`, `.pdf`, `.xlsx`, etc.)
+- Video files (`.mp4`, `.avi`, `.mov`, etc.)
+- Audio files (`.mp3`, `.wav`, `.flac`, etc.)
+- Archive files (`.zip`, `.tar`, `.rar`, etc.)
+- Program files (`.py`, `.exe`, `.jar`, etc.)
+- Any other binary files or custom file formats
+
+Feel free to encrypt and decrypt a wide range of files using this script.
+
+## Example
+
+python FED.py
+Enter the full path of the file you want to work with (or 'exit' to quit): /path/to/your/file.txt
+Enter your password for encryption/decryption: secret123
+Do you want to encrypt (E) or decrypt (D) the file? (E/D): E
+File encrypted successfully.
